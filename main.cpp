@@ -2,6 +2,7 @@
 #include <GL/glut.h>
 #include <GL/glu.h>
 #include "main.h"
+#include "CPU.h"
 
 #define SCREEN_WIDTH 160
 #define SCREEN_HEIGHT 144
@@ -14,6 +15,9 @@ int main(int argc, char **argv) {
 
     if(glutCreateWindow("GB Emu") < 1)
         exit(1);
+
+    CPU test;
+    test.init();
     glutDisplayFunc(display);
     glutMainLoop();
 
